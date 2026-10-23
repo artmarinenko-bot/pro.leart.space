@@ -1015,7 +1015,7 @@ fbq('track', 'PageView');
 
       <div class="hero-top">
         <div class="hero-copy">
-          <span class="eyebrow-shape"><span class="dot"></span>Онлайн-курс · Старт 25 жовтня</span>
+          <span class="eyebrow-shape"><span class="dot"></span>Онлайн-курс · Старт 1 листопада</span>
           <h1>Цифрова психологія: зрозуміти себе та інших</h1>
           <p class="lead">За датою народження дізнайтеся свої сильні сторони, що дає вам енергію та що може виснажувати.</p>
         </div>
@@ -1359,7 +1359,7 @@ fbq('track', 'PageView');
     <div class="wrap final-inner">
       <h2>Пізнайте себе. Зрозумійте інших. Побачте свій напрямок до реалізації.</h2>
       <p class="final-lead">Дізнайтеся свої сильні сторони, що дає вам енергію та як використовувати ці знання у стосунках, роботі й щоденних рішеннях.</p>
-      <p class="final-start"><strong>Старт курсу — 25 жовтня</strong></p>
+      <p class="final-start"><strong>Старт курсу — 1 листопада</strong></p>
       <div class="price-line">
         <span class="price-old">1990 грн</span>
         <span class="price-new">440 грн</span>
@@ -1420,6 +1420,16 @@ fbq('track', 'PageView');
       window.addEventListener('resize', syncSticky);
     })();
   </script>
+
+<script>
+document.querySelectorAll('a.btn-primary').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    if (typeof fbq === 'function') {
+      fbq('track', 'InitiateCheckout', { value: 440, currency: 'UAH', content_name: 'Цифрова психологія' });
+    }
+  });
+});
+</script>
 
 </body>
 </html>
